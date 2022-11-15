@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         
         askQuestion()
         // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(seeScore))
     }
     func askQuestion(action: UIAlertAction! = nil){
         countries.shuffle()
@@ -65,6 +66,14 @@ class ViewController: UIViewController {
         
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
+    }
+    
+    @objc func seeScore(){
+        let notice = UIAlertController(title: "Current Score", message: "Score is \(score)", preferredStyle: .alert)
+        
+        notice.addAction(UIAlertAction(title: "Continue", style: .cancel))
+        present(notice, animated: true)
+
     }
     
 }
