@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9i-yE-tjj">
                                 <rect key="frame" x="80" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K9i-yE-tjj" secondAttribute="height" multiplier="2:1" id="pyl-WS-8cb"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="us"/>
                                 <connections>
@@ -26,6 +29,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVY-NB-SOI">
                                 <rect key="frame" x="80" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eVY-NB-SOI" secondAttribute="height" multiplier="2:1" id="R1d-md-tMY"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="us"/>
                                 <connections>
@@ -34,6 +40,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5T-bU-GvR">
                                 <rect key="frame" x="80" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U5T-bU-GvR" secondAttribute="height" multiplier="2:1" id="Qgx-HL-icd"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="us"/>
                                 <connections>
@@ -48,7 +57,10 @@
                             <constraint firstItem="U5T-bU-GvR" firstAttribute="top" secondItem="K9i-yE-tjj" secondAttribute="bottom" constant="30" id="7wN-ma-pmb"/>
                             <constraint firstItem="K9i-yE-tjj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="8gZ-li-a3y"/>
                             <constraint firstItem="eVY-NB-SOI" firstAttribute="top" secondItem="U5T-bU-GvR" secondAttribute="bottom" constant="30" id="Gkj-w4-GEK"/>
+                            <constraint firstItem="U5T-bU-GvR" firstAttribute="height" secondItem="K9i-yE-tjj" secondAttribute="height" id="On0-Mk-LlY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eVY-NB-SOI" secondAttribute="bottom" constant="20" id="Rn7-iR-Yfy"/>
                             <constraint firstItem="eVY-NB-SOI" firstAttribute="centerX" secondItem="U5T-bU-GvR" secondAttribute="centerX" id="gLx-Zz-xVQ"/>
+                            <constraint firstItem="eVY-NB-SOI" firstAttribute="height" secondItem="U5T-bU-GvR" secondAttribute="height" id="nuz-xG-b4Q"/>
                             <constraint firstItem="U5T-bU-GvR" firstAttribute="centerX" secondItem="K9i-yE-tjj" secondAttribute="centerX" id="vvc-pe-97l"/>
                         </constraints>
                     </view>

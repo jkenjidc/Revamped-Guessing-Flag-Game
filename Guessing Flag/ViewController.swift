@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var score = 0
     var correctAnswer = 0
     var attempts = 0
+    
+    let defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco","nigeria", "poland", "russia", "spain", "uk", "us"]
@@ -29,6 +31,9 @@ class ViewController: UIViewController {
         
         
         askQuestion()
+        if defaults.object(forKey: "highScore") == nil {
+            defaults.set(0, forKey: "highScore")
+        }
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(seeScore))
     }
@@ -58,7 +63,13 @@ class ViewController: UIViewController {
         attempts += 1
         if attempts == 9{
             title = "Finished!"
-            message = "Your final score is \(score)"
+            message = "Your final score is \(score)."
+            let currentHighScore = defaults.integer(forKey: "highScore")
+            
+            if score > currentHighScore {
+                message = message + " New High Score! Current: \(score) previous: \(currentHighScore)"
+                defaults.set(score, forKey: "highScore")
+            }
             score = 0
             attempts = 0
         }
